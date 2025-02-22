@@ -12,7 +12,7 @@ if [[ "${quiet}" == "yes" ]]; then
     lOG_TO_DEV_NULL="> /dev/null 2>&1"
 fi
 
-retry_curl="--retry 4 --retry-max-out-time 10 --retry-connrefused"
+retry_curl="--retry 4 --retry-max-time 10 --retry-connrefused"
 bazelroot="/usr/local/lib/bazel-${ver}"
 
 set_bazel() {
