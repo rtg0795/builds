@@ -4,10 +4,10 @@ set -e -x
 arch=$(uname | tr '[:upper:]' '[:lower:]')
 arch_set="arm64"
 
-ver=6.5.0
+ver="6.5.0"
 quiet="yes"
 
-if [[ "${quiet}" == "yes"]]; then
+if [[ "$quiet" == "yes"]]; then
     CURL_QUIET="-q"
     lOG_TO_DEV_NULL="> /dev/null 2>&1"
 fi
