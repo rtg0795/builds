@@ -1,0 +1,22 @@
+name: macOS ARM64 Simple
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  run_commands:
+    runs-on: macos-14
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Run uname -m
+        run: uname -m
+
+      - name: Run date
+        run: date
+
+      - name: Display macOS version
+        run: sw_vers
