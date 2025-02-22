@@ -12,11 +12,8 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Run uname -m
-        run: uname -m
-
-      - name: Run date
-        run: date
-
       - name: Display macOS version
         run: sw_vers
+
+      - name: Run uname -m
+        run: chmod +x script.sh && ./script.sh
