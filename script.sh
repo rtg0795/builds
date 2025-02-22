@@ -25,8 +25,7 @@ if [[ -e "${bazelroot}/bin/bazel" ]]; then
 fi
 
 filename="bazel-${ver}-installer-${arch}-${arch_set}.sh"
-cmd="curl $CURL_QUIET -sLO $retry_curl \
-    https://storage.googleapis.com/bazel/${ver}/release/${filename}"
+cmd="curl $CURL_QUIET -sLO $retry_curl https://storage.googleapis.com/bazel/${ver}/release/${filename}"
 
 eval "$cmd
 sudo mkdir -p "${bazelroot}"
