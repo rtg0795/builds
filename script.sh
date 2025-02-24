@@ -31,7 +31,7 @@ set_bazel
 
 
 export BUILD_ENV=/tmpfs/BUILD_ENV
-mkdir -p ${BUILD_ENV}
+sudo mkdir -p ${BUILD_ENV}
 
 JAVA_HOME=$(/usr/libexec/java_home -v21)
 export JAVA_HOME
