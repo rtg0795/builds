@@ -11,7 +11,7 @@ bazelroot="/usr/local/lib/bazel-${ver}"
 
 set_bazel() {
     sudo ln -sf "${bazelroot}/bin/bazel" "/usr/local/bin/bazel"
-    exit 0
+    # exit 0
 }
 
 if [[ -e "${bazelroot}/bin/bazel" ]]; then
