@@ -3,6 +3,12 @@ set -e -x
 
 echo $PATH
 
+if [ -d /usr/local/bin ]; then
+  echo "/usr/local/bin exists"
+else
+  echo "/usr/local/bin does not exist"
+fi
+
 arch=$(uname | tr '[:upper:]' '[:lower:]')
 arch_set="arm64"
 
@@ -39,6 +45,11 @@ export PATH="/usr/local/bin:$PATH"
 command -v bazel
 echo $PATH
 
+if [ -d /usr/local/bin ]; then
+  echo "/usr/local/bin exists"
+else
+  echo "/usr/local/bin does not exist"
+fi
 
 # export BUILD_ENV=/tmpfs/BUILD_ENV
 # sudo mkdir -p ${BUILD_ENV}
