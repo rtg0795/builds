@@ -33,6 +33,7 @@ set_bazel
 # bazel version
 
 command -v bazel
+echo $PATH
 
 
 # export BUILD_ENV=/tmpfs/BUILD_ENV
