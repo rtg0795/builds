@@ -1,6 +1,8 @@
 #!/bin/bash
 set -e -x
 
+echo $PATH
+
 arch=$(uname | tr '[:upper:]' '[:lower:]')
 arch_set="arm64"
 
