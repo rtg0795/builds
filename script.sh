@@ -33,32 +33,3 @@ set_bazel
 export BUILD_ENV=/tmpfs/BUILD_ENV
 sudo mkdir -p ${BUILD_ENV}
 
-JAVA_HOME=$(/usr/libexec/java_home -v21)
-export JAVA_HOME
-java -version
-
-# pyenv
-PYENV_ROOT="/Users/kbuilder/.pyenv"
-cd "${PYENV_ROOT}" && git pull && cd -
-eval "${pyenv init -}"
-
-pyenv install -s 3.11.1
-pyenv shell 3.11.1
-PYTHON_BIN_PATH="/Users/kbuilder/.pyenv/versions/3.11.1/bin/python"
-PIP_COMMAND="$(pyenv which pip)"
-"${PYTHON_BIN_PATH} --version"
-"${PIP_COMMAND} --version"
-
-"${PYTHON_BIN_PATH}" -m venv "${BUILD_ENV}"
-source "${BUILD_ENV}/bin/activate"
-
-PYTHON_BIN_PATH=$(which python)
-PIP_COMMAND=$(which pip)
-
-"${PIP_COMMAND} install pip --upgrade --quiet"
-export SETUPTOOLS_USE_DISUTILS=stdlib
-
-install_targets+=("wheel==0.42.0")
-install_targets+=("setuptools" "pipdeptree")
-"${PIP_COMMAND}" install "${install_targets[@]}" --upgrade --quiet
-"${PIP_COMMAND}" list
