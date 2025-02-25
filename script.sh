@@ -32,7 +32,8 @@ set_bazel
 # which bazel
 # bazel version
 
-ls ${bazelroot}
+ls /usr/local/bin/bazel
+
 
 # export BUILD_ENV=/tmpfs/BUILD_ENV
 # sudo mkdir -p ${BUILD_ENV}
