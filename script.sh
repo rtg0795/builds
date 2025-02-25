@@ -32,7 +32,7 @@ set_bazel
 # which bazel
 # bazel version
 
-ls /usr/local/bin/bazel
+command -v bazel
 
 
 # export BUILD_ENV=/tmpfs/BUILD_ENV
