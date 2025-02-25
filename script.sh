@@ -29,7 +29,8 @@ eval "$command"
 rm -rf "${filename}"
 set_bazel
 
+${bazelroot} --version
 
-export BUILD_ENV=/tmpfs/BUILD_ENV
-sudo mkdir -p ${BUILD_ENV}
+# export BUILD_ENV=/tmpfs/BUILD_ENV
+# sudo mkdir -p ${BUILD_ENV}
 
