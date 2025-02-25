@@ -34,6 +34,8 @@ set_bazel
 # which bazel
 # bazel version
 
+export PATH="/usr/local/bin:$PATH"
+
 command -v bazel
 echo $PATH
 
